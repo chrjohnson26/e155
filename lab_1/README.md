@@ -1,0 +1,3 @@
+# Lab 1
+
+FPGA and MCU Setup and Testing
