@@ -8,12 +8,12 @@
 */
 
 module led_controller(input logic clk,
-            input logic s[3:0],
-            output logic led[2:0]);
+            input logic [3:0] s,
+            output logic [2:0] led);
     
 
     logic int_osc;
-    logic [20:0] counter;
+    logic [25:0] counter;
 
 
     // To generate the clock use the onboard high-speed oscillator
@@ -29,9 +29,9 @@ module led_controller(input logic clk,
     // hf_osc is oscillating at 48MHz, we want led[2] to blink at 2.4Hz
     // So we want the MSB to turn on every 24MHz / 2.4 Hz = 20 MHz
     always_ff @(posedge int_osc) begin
-        if (counter == 7'd2000000) begin
-            assign led[2] = ~led[2]
-            counter <= 0
+        if (counter == 25'd20000000) begin
+            led[2] <= ~led[2];
+            counter <= 0;
         end
         counter <= counter + 1;
     end

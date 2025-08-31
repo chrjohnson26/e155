@@ -8,8 +8,8 @@
 */
 
 module segment(input logic clk, reset,
-                input logic s[3:0],
-                output logic seg[6:0])
+                input logic [3:0] s,
+                output logic [6:0] seg);
 
     always_comb begin
         //                       GFEDCBA

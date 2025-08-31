@@ -8,14 +8,14 @@
 */
 
 module top(input logic clk, reset,
-            input logic s[3:0],
-            output logic led[2:0],
-            output logic seg[6:0]);
+            input logic [3:0] s,
+            output logic [2:0] led,
+            output logic [6:0] seg);
 
     // Instantiate led_controller module
     led_controller lc(clk, s, led);
 
     // Instantiate segment module
-    segment seg(clk, reset, s, seg);
+    segment segmt(clk, reset, s, seg);
 
 endmodule
