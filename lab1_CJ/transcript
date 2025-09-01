@@ -1,0 +1,85 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Load canceled
+# Loading project lab1_CJ
+# Load canceled
+# Compile of led_controller.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of top.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.led_controller work.segment work.top
+# vsim -gui work.led_controller work.segment work.top 
+# Start time: 11:53:53 on Sep 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/chrjohnson/my_designs/lab1_CJ/source/impl_1/led_controller.sv(19): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'top.lc'
+# ** Error: C:/Users/chrjohnson/my_designs/lab1_CJ/source/impl_1/led_controller.sv(19): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'led_controller'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# End time: 11:53:54 on Sep 01,2025, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 5
+# Load canceled
+force s 0000
+# Error while executing: force
+# Usage: force <object_name> {<value> [[@]<time_info>][, <value> [[@]<time_info>]...} [-freeze | -drive | -deposit] [-cancel [@]<time_info>] [-repeat [@]<time_info>]
+# Compile of led_controller.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of top.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.led_controller work.segment work.top
+# vsim -gui work.led_controller work.segment work.top 
+# Start time: 11:55:20 on Sep 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/chrjohnson/my_designs/lab1_CJ/source/impl_1/led_controller.sv(19): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'top.lc'
+# ** Error: C:/Users/chrjohnson/my_designs/lab1_CJ/source/impl_1/led_controller.sv(19): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'led_controller'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# Error loading design
+# End time: 11:55:20 on Sep 01,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+run 100
+# No Design Loaded!
+vsim -gui work.top -L iCE40UP
+# vsim -gui work.top -L iCE40UP 
+# Start time: 11:57:32 on Sep 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading iCE40UP.HSOSC(fast)
+force s 0000
+run 100
+add wave -position insertpoint  \
+sim:/top/s \
+sim:/top/led \
+sim:/top/seg
+force s 0000
+run 100
+force s 0001
+run 100
+force s 0010
+run 100
+force s 4'b0010
+run 100
+clear
+# invalid command name "clear"
+# Causality operation skipped due to absence of debug database file
+force s 4'b1000
+run 100
+run 10000

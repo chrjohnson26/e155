@@ -1,0 +1,5 @@
+DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
+Mon Sep  1 13:25:23 2025
+
+ERROR <71003024> - Pin [12], which supports Ports of type [BB_B] does not support placement of Port [seg[5]] with type [BB_OD]. Please check for the device's IO placement limitations and change the port's locate Constraint to a compatible pin.
+ERROR <71003024> - Pin [21], which supports Ports of type [BB_B] does not support placement of Port [seg[4]] with type [BB_OD]. Please check for the device's IO placement limitations and change the port's locate Constraint to a compatible pin.
