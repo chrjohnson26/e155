@@ -13,12 +13,40 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-vsim work.led_controller
-# vsim work.led_controller 
-# Start time: 16:14:18 on Sep 01,2025
+# Load canceled
+vsim -gui work.led_controller work.segment work.top -L iCE40UP -Lf iCE40UP
+# vsim -gui work.led_controller work.segment work.top -L iCE40UP -Lf iCE40UP 
+# Start time: 19:28:11 on Sep 01,2025
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: C:/Users/chrjohnson/my_designs/lab1_CJ/source/impl_1/led_controller.sv(19): Module 'HSOSC' is not defined.
-#  For instance 'hf_osc' at path 'led_controller'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
+# Loading sv_std.std
+# Loading work.led_controller(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.segment(fast)
+# Loading work.top(fast)
+add wave -position insertpoint  \
+sim:/segment/s \
+sim:/segment/seg
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: chrjohnson  Hostname: 8FMZ0R3  ProcessID: 7580
+#           Attempting to use alternate WLF file "./wlftfqmam8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfqmam8
+add wave -position insertpoint sim:/led_controller/hf_osc/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/led_controller/hf_osc/*'.
+add wave -position insertpoint sim:/led_controller/hf_osc/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/led_controller/hf_osc/*'.
+add wave -position insertpoint sim:/top/lc/hf_osc/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/top/lc/hf_osc/*'.
+add wave -position insertpoint  \
+sim:/top/led
+force s 0000
+run 100
+run 1000
+# Error opening C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab1_CJ/nofile
+# Path name 'C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab1_CJ/nofile' doesn't exist.
+# Error opening C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab1_CJ/nofile
+# Path name 'C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab1_CJ/nofile' doesn't exist.
+force s 4'b0001
+run 100
+# End time: 19:53:43 on Sep 01,2025, Elapsed time: 0:25:32
+# Errors: 0, Warnings: 2

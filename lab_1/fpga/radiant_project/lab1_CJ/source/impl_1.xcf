@@ -18,8 +18,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab1_CJ_impl_1.bin</File>
-			<FileTime>09/01/25 16:23:23</FileTime>
-			<JedecChecksum>0xF875</JedecChecksum>
+			<FileTime>09/01/25 18:27:48</FileTime>
+			<JedecChecksum>0xF815</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>

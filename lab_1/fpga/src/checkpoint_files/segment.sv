@@ -7,6 +7,9 @@
     Combinational verilog code for controlling a 7-segment display with switches
 */
 
+/*
+	segment displays a single hexadecimal digit based on four switches as inputs
+*/
 module segment(input logic [3:0] s,
                 output logic [6:0] seg);
 
