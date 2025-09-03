@@ -8,7 +8,7 @@ logic [6:0] led, led_expected;
 logic [31:0] vectornum, errors;
 logic [9:0] testvectors[10000:0];
 
-segment sgmt(s, seg);
+led_controller lc(s, led);
 
 always
 begin
@@ -19,7 +19,7 @@ end
 //// Start of test. 
 initial
 begin
-$readmemb("segment.tv", testvectors);
+$readmemb("led_controller.tv", testvectors);
 vectornum=0;
 errors=0;
 
@@ -31,14 +31,14 @@ always @(posedge clk)
 begin
 #1;
 
-{s, seg_expected} = testvectors[vectornum];
+{s, led_expected} = testvectors[vectornum];
 end
 
 always @(negedge clk)
 
 if (~reset) begin
 
-if (seg !== seg_expected) begin
+if (led !== led_expected) begin
 
 errors = errors + 1;
 end
