@@ -1,14 +1,16 @@
-`timescale 1ns/1ns
-module led_controller_tb();
+`timescale 1ps/1ps
+module lab1_CJ_tb();
 
 logic clk, reset;
 logic [3:0] s;
-logic [2:0] led, led_expected;
+logic [2:0] led;
+logic [6:0] seg;
 
 logic [31:0] vectornum, errors;
 logic [9:0] testvectors[10000:0];
 
 led_controller lc(s, led);
+segment sgmt(s, seg);
 
 always
 begin
@@ -19,7 +21,7 @@ end
 //// Start of test. 
 initial
 begin
-$readmemb("led_controller.tv", testvectors);
+$readmemb("lab1_CJ.tv", testvectors);
 vectornum=0;
 errors=0;
 
@@ -31,25 +33,24 @@ always @(posedge clk)
 begin
 #1;
 
-{s, led_expected} = testvectors[vectornum];
+{s, led_expected, seg_expected} = testvectors[vectornum];
 end
 
 always @(negedge clk)
 
 if (~reset) begin
 
-if (led !== led_expected) begin
-
-$display("Error: inputs = %b", s);
-
-$display(" outputs = %b (%b expected)", led, led_expected);
+if (led !== led_expected | seg !== seg_expected) begin
 
 errors = errors + 1;
 end
 
 vectornum = vectornum + 1;
 
-if (testvectors[vectornum] === 7'bx) begin
+if (testvectors[vectornum] === 14'bx) begin
+
+    $display("Error: inputs = %b", s);
+    $display(" outputs = %b %b (%b %b expected)", led, seg, led_expected, seg_expected);
 	
 $display("%d tests completed with %d errors", vectornum, 
 errors);

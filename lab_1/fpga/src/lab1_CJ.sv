@@ -1,4 +1,4 @@
-// top.sv
+// lab1_CJ.sv
 // Christian Johnson
 // chrjohnson@hmc.edu
 // 8/30/25

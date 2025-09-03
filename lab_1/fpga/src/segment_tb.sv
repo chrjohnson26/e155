@@ -40,12 +40,16 @@ if (~reset) begin
 
 if (seg !== seg_expected) begin
 
+$display("Error: inputs = %b", s);
+
+$display(" outputs = %b (%b expected)", seg, seg_expected);
+
 errors = errors + 1;
 end
 
 vectornum = vectornum + 1;
 
-if (testvectors[vectornum] === 10'bx) begin
+if (testvectors[vectornum] === 11'bx) begin
 	
 $display("%d tests completed with %d errors", vectornum, 
 errors);
