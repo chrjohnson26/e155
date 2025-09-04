@@ -9,8 +9,7 @@ logic [6:0] seg;
 logic [31:0] vectornum, errors;
 logic [9:0] testvectors[10000:0];
 
-led_controller lc(s, led);
-segment sgmt(s, seg);
+lab1_CJ dut(s, led, seg);
 
 always
 begin
