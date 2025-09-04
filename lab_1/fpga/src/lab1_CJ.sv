@@ -7,7 +7,7 @@
     top module instantiates other modules for lab 1
 */
 
-module top(input logic [3:0] s,
+module lab1_CJ(input logic [3:0] s,
             output logic [2:0] led,
             output logic [6:0] seg);
 
