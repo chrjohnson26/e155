@@ -10,13 +10,17 @@
 
 module lab2_CJ (input logic [7:0] s,
                 output logic [6:0] seg,
-                output logic anode1, anode2);
+                output logic anode1, anode2,
+                );
 
     logic int_osc;
     logic [25:0] counter;
     logic enable = 1'b0;
     logic [3:0] cur_s;
+    logic [4:0] sum;
 
+    // Adder for LEDs
+    assign sum = s[3:0] + s[7:3];
 
     // Generate the clock using the onboard high-speed oscillator
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
@@ -24,7 +28,7 @@ module lab2_CJ (input logic [7:0] s,
     // Counter to choose which display
     // TODO: Increase frequency
     always_ff @(posedge int_osc) begin
-         if (counter == 25'd5000000) begin
+         if (counter == 25'2400) begin
             enable <= ~enable;
             counter <= 0;
         end else begin
