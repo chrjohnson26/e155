@@ -12,4 +12,5 @@ module two_input_led_adder(input logic [3:0] a, b,
 
     // Adder for LEDs
     assign sum = a + b;
+    
 endmodule

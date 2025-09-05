@@ -19,8 +19,8 @@ module lab2_CJ (input logic [7:0] s,
     logic [3:0] cur_s;
     logic [4:0] sum;
 
-    // Adder for LEDs
-    assign sum = s[3:0] + s[7:4];
+    // Adder logic
+    two_input_led_adder adder(s[3:0], s[7:4]);
 
     // Generate the clock using the onboard high-speed oscillator
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
