@@ -5,11 +5,13 @@ logic clk, reset;
 logic [3:0] a, b;
 logic [4:0] sum, sum_expected;
 
-logic [31:0] vectornum, errors;
+logic [31:0] testnum, errors;
 logic [9:0] testvectors[10000:0];
 
+logic [4:0] i, j;
+
 // Initializng adder module
-two_input_led_adder adder(a, b, sum)
+two_input_led_adder adder(a, b, sum);
 
 always
 begin
@@ -20,72 +22,50 @@ end
 //// Start of test. 
 initial
 begin
-// $readmemb("adder.tv", testvectors);
-
-vectornum=0;
+testnum=0;
 errors=0;
+i = 0;
+j = 0;
 
 reset=1; #22; 
 reset=0;
+end
 
-for (i = 4'd0 ; i < 4'd16; i = i + 4'd1) begin
-    for (j = 4'd0 ; j < 4'd16; j =  + 4'd1) begin
-        // Setting expected sum
-        assign sum_expected = i + j
-        // Setting a and b to current value
-        assign a = i;
-        assign b = j; #5;
+always @(posedge clk)
+begin
+if (~reset) begin
+    // Apply new test inputs
+    a = i;
+    b = j;
+    sum_expected = i + j;
+end
+end
 
-
-        // Asserting that the sum is as expected
-        if (sum !== sum_expected) begin
-            $display("Error: inputs = %b, %b", a, b);
-
-            $display(" outputs = %b (%b expected)", sum, sum_expected);
-
-            errors = errors + 1;
-        end
+always @(negedge clk)
+if (~reset) begin
+    // Check results on negative edge
+    if (sum !== sum_expected) begin
+        $display("Error: inputs = %d, %d", a, b);
+        $display(" outputs = %d (%d expected)", sum, sum_expected);
+        errors = errors + 1;
+    end
+    
+    $display("Test %d: a=%d, b=%d, sum=%d, expected=%d", testnum, a, b, sum, sum_expected);
+    
+    // Increment test counters
+    testnum = testnum + 1;
+    
+    // Check for completion first, before incrementing i,j
+    if (testnum >= 256) begin
+        $display("%d tests completed with %d errors", testnum, errors);
+        $stop;
+    end
+    
+    // Then increment i,j for next test
+    j = j + 1;
+    if (j >= 16) begin
+        j = 0;
+        i = i + 1;
     end
 end
-
-$stop;
-
-
-end
-
-// always @(posedge clk)
-// begin
-// #1;
-
-// {a, b, sum_expected} = testvectors[vectornum];
-
-
-
-// end
-
-
-
-// always @(negedge clk)
-
-// if (~reset) begin
-
-// if (led !== led_expected) begin
-
-// $display("Error: inputs = %b", s);
-
-// $display(" outputs = %b (%b expected)", led, led_expected);
-
-// errors = errors + 1;
-// end
-
-// vectornum = vectornum + 1;
-
-// if (testvectors[vectornum] === 7'bx) begin
-	
-// $display("%d tests completed with %d errors", vectornum, 
-// errors);
-
-// $stop;
-// end
-// end
 endmodule

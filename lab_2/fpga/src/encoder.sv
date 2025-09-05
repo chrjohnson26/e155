@@ -10,15 +10,15 @@
 
 module encoder (
     input logic enable,
-    input logic [7:0] s,
+    input logic [3:0] s1, s2,
     output logic [3:0] switches
 );
 
     always_comb begin
-        // If enable 0 then choose s[0:3] and if enable 1 then choose s[4:7]
+        // If enable 0 then choose s1 and if enable 1 then choose s2
         case (enable)
-            1'b0: switches = s[3:0];
-            1'b1: switches = s[7:4];
+            1'b0: switches = s1;
+            1'b1: switches = s2;
             default: switches = 4'b0;
         endcase
     end
