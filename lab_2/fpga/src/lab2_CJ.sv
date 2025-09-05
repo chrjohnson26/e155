@@ -26,7 +26,6 @@ module lab2_CJ (input logic [7:0] s,
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
     // Counter to choose which display
-    // TODO: Increase frequency
     always_ff @(posedge int_osc) begin
          if (counter == 25'2400) begin
             enable <= ~enable;
