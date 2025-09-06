@@ -9,8 +9,6 @@
 module decoder_tb();
 
 logic clk, reset;
-logic [3:0] s;
-logic [6:0] seg, seg_expected;
 
 logic enable;
 logic anode1, anode2, anode1_expected, anode2_expected;
@@ -40,17 +38,16 @@ begin
         end 
         always @(negedge clk) 
         if (~reset) begin 
-            if (anode1 !== anode1_expected, anode2 !== anode2_expected) 
-            begin 
+            if (anode1 !== anode1_expected || anode2 !== anode2_expected) 
+            begin
                 $display("Error: inputs = %b", enable); 
                 $display(" outputs = %b, %b (%b, %b expected)", anode1, anode2, anode1_expected, anode2_expected); 
                 errors = errors + 1;
             end 
             vectornum = vectornum + 1; 
-            if (testvectors[vectornum] === 11'bx) 
-            begin 
+            if (testvectors[vectornum] === 3'bx) begin
                 $display("%d tests completed with %d errors", vectornum, errors); 
                 $stop;
+            end 
         end 
-    end 
 endmodule

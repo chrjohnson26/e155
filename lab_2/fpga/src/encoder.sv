@@ -19,7 +19,7 @@ module encoder (
         case (enable)
             1'b0: switches = s1;
             1'b1: switches = s2;
-            default: switches = 4'b0;
+            default: switches = 4'bx;
         endcase
     end
 

@@ -1,3 +1,8 @@
+// two_input_led_adder_tb
+// Christian Johnson
+// chrjohnson@hmc.edu
+// 9/6/25
+
 `timescale 1ns/1ns
 module two_input_led_adder_tb();
 
@@ -6,9 +11,8 @@ logic [3:0] a, b;
 logic [4:0] sum, sum_expected;
 
 logic [31:0] testnum, errors;
-logic [9:0] testvectors[10000:0];
 
-logic [4:0] i, j;
+logic [3:0] i, j;
 
 // Initializng adder module
 two_input_led_adder adder(a, b, sum);
@@ -49,23 +53,21 @@ if (~reset) begin
         $display(" outputs = %d (%d expected)", sum, sum_expected);
         errors = errors + 1;
     end
-    
-    $display("Test %d: a=%d, b=%d, sum=%d, expected=%d", testnum, a, b, sum, sum_expected);
-    
+        
     // Increment test counters
     testnum = testnum + 1;
     
-    // Check for completion first, before incrementing i,j
-    if (testnum >= 256) begin
-        $display("%d tests completed with %d errors", testnum, errors);
-        $stop;
-    end
-    
-    // Then increment i,j for next test
+    // Update inputs
     j = j + 1;
-    if (j >= 16) begin
+    if (j >= 15) begin
         j = 0;
         i = i + 1;
+    end
+    
+    // Check if we have covered all tests
+    if (testnum === 256) begin
+        $display("%d tests completed with %d errors", testnum, errors);
+        $stop;
     end
 end
 endmodule
