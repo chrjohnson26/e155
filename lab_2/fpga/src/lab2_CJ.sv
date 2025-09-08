@@ -8,7 +8,7 @@
     Connects the 7-segment display module to the FPGA board
 */
 
-module lab2_CJ (input logic clk, reset,
+module lab2_CJ (input logic reset,
 				input logic [3:0] s1, s2,
                 output logic [6:0] seg,
                 output logic anode1, anode2,
@@ -25,19 +25,19 @@ module lab2_CJ (input logic clk, reset,
     two_input_led_adder adder(s1, s2, leds);
 
     // Generate the clock using the onboard high-speed oscillator
-    //HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
+    HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
     // Counter to choose which display
-    always_ff @(posedge clk, posedge reset) begin
+    always_ff @(posedge int_osc) begin
         if (reset) begin
             counter <= 0;
             enable <= 1'b0;
 			sum <= 0;
-        end else if (counter == 25'd10) begin
+        end else if (counter == 26'd100000) begin
             enable <= ~enable;
             counter <= 0;
         end else begin
-            counter <= counter + 1'b1;
+            counter <= counter + 26'b1;
         end
     end
 
