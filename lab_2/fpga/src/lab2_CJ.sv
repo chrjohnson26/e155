@@ -5,7 +5,7 @@
 
 /*
     Top-level module for Lab 2
-    Connects the 7-segment display module to the FPGA board
+    Instantiates the clock with the HSOSC and calls submodules to control the LEDs and time multiplex the segment display
 */
 
 module lab2_CJ (input reset,
