@@ -8,7 +8,8 @@
     Connects the 7-segment display module to the FPGA board
 */
 
-module lab2_CJ (input logic [3:0] s1, s2,
+module lab2_CJ (input reset,
+                input logic [3:0] s1, s2,
                 output logic [6:0] seg,
                 output logic anode1, anode2,
 				output logic [4:0] leds
@@ -16,7 +17,7 @@ module lab2_CJ (input logic [3:0] s1, s2,
 
     logic int_osc;
     logic [25:0] counter;
-    logic enable = 1'b1;
+    logic enable;
     logic [3:0] cur_s;
 
     // Adder logic
@@ -26,13 +27,16 @@ module lab2_CJ (input logic [3:0] s1, s2,
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
     // Counter to choose which display
-    always_ff @(posedge int_osc) begin
-        if (counter == 26'd4000000) begin
-            enable <= ~enable;
-            counter <= 0;
-        end else begin
-            counter <= counter + 26'b1;
-        end
+    always_ff @(posedge int_osc or posedge reset) begin
+    if (reset) begin
+        enable <= 1'b0;
+        counter <= 0;
+    end else if (counter == 26'd240000) begin
+        enable <= ~enable;
+        counter <= 0;
+    end else begin
+        counter <= counter + 26'b1;
+    end
     end
 
     // Encoder to choose which inputs to choose

@@ -12,6 +12,6 @@ module decoder (
     output logic anode1,
     output logic anode2);
 
-	assign anode1 = ~enable;
-	assign anode2 = enable;
+	assign anode1 = enable;
+	assign anode2 = ~enable;
 endmodule
