@@ -18,8 +18,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab2_CJ_impl_1.bin</File>
-			<FileTime>09/08/25 11:46:06</FileTime>
-			<JedecChecksum>0xDE39</JedecChecksum>
+			<FileTime>09/08/25 19:52:11</FileTime>
+			<JedecChecksum>0xD948</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
@@ -101,6 +101,6 @@
 	<CableOptions>
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
-		<USBID>UPduino v3.0 Location 0015 Serial </USBID>
+		<USBID>UPduino v3.0 Location 0014 Serial </USBID>
 	</CableOptions>
 </ispXCF>
