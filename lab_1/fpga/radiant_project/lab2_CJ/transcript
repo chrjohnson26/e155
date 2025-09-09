@@ -1,0 +1,1691 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading project lab2_CJ
+# Compile of decoder.sv was successful.
+# Compile of decoder_tb.sv was successful.
+# Compile of encoder.sv was successful.
+# Compile of encoder_tb.sv was successful.
+# Compile of lab2_CJ.sv was successful.
+# Compile of lab2_CJ_tb.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of two_input_led_adder.sv was successful.
+# Compile of two_input_led_adder_tb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.lab2_CJ_tb {-voptargs=+acc -L iCE40UP -Lf iCE40UP} -L iCE40UP -Lf iCE40UP
+# vsim -gui work.lab2_CJ_tb -voptargs="+acc -L iCE40UP -Lf iCE40UP" -L iCE40UP -Lf iCE40UP 
+# Start time: 12:45:10 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Warning: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(15): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 6, found 5.
+# ** Warning: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(15): (vopt-2718) [TFMPC] - Missing connection for port 'leds'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+quit -sim
+# End time: 12:53:00 on Sep 07,2025, Elapsed time: 0:07:50
+# Errors: 0, Warnings: 9
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(31): (vlog-2730) Undefined variable: 'expected_leds'.
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/lscc/radiant/2024.2/questasim/win64/vlog failed.
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:10 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 12:53:10 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:11 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 12:53:11 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:11 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 12:53:11 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:52 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 12:53:52 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui {-voptargs=+acc -L iCE40UP -Lf iCE40UP} -L iCE40UP -Lf iCE40UP work.lab2_CJ_tb
+# vsim -gui -voptargs="+acc -L iCE40UP -Lf iCE40UP" -L iCE40UP -Lf iCE40UP work.lab2_CJ_tb 
+# Start time: 12:54:12 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/errors \
+sim:/lab2_CJ_tb/leds \
+sim:/lab2_CJ_tb/expected_leds \
+sim:/lab2_CJ_tb/expected_s1_seg \
+sim:/lab2_CJ_tb/expected_s2_seg
+run 1000
+# Testing lab2_CJ time multiplexing functionality
+# Time		S1	S2	Anode1	Anode2	Seg		Expected
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run 10000000000
+# Testing lab2_CJ time multiplexing functionality
+# Time		S1	S2	Anode1	Anode2	Seg		Expected
+# 100000		0001	0010	0	1	1111001	0000110 (s1)
+# ERROR: Expected 0000110 for s1=0001, got 1111001
+quit -sim
+# End time: 13:01:33 on Sep 07,2025, Elapsed time: 0:07:21
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 13:01:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 13:01:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 13:01:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 13:01:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 13:01:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 13:01:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:49 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 13:01:49 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:49 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 13:01:49 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:01:49 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 13:01:49 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui {-voptargs=+acc -L iCE40UP -Lf iCE40UP} -L iCE40UP -Lf iCE40UP work.lab2_CJ_tb
+# vsim -gui -voptargs="+acc -L iCE40UP -Lf iCE40UP" -L iCE40UP -Lf iCE40UP work.lab2_CJ_tb 
+# Start time: 13:03:08 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/errors \
+sim:/lab2_CJ_tb/leds \
+sim:/lab2_CJ_tb/expected_leds \
+sim:/lab2_CJ_tb/expected_s1_seg \
+sim:/lab2_CJ_tb/expected_s2_seg
+run 10000
+# Testing lab2_CJ time multiplexing functionality
+# Time		S1	S2	Anode1	Anode2	Seg		Expected
+run 1000000000
+# 100000		0001	0010	0	1	1111001	1111001 (s1)
+run 100000000000000
+# Causality operation skipped due to absence of debug database file
+# Break key hit
+# Simulation stop requested.
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/dut/int_osc
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run
+# Testing lab2_CJ time multiplexing functionality
+# Time		S1	S2	Anode1	Anode2	Seg		Expected
+run
+run
+run
+run
+run
+run
+run
+
+run
+run
+
+run
+
+run
+run
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run 10000
+quit -sim
+# End time: 13:37:26 on Sep 07,2025, Elapsed time: 0:34:18
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 13:37:34 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 13:37:34 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui {-voptargs=+acc -L iCE40UP -Lf iCE40UP} -L iCE40UP -Lf iCE40UP work.lab2_CJ_tb
+# vsim -gui -voptargs="+acc -L iCE40UP -Lf iCE40UP" -L iCE40UP -Lf iCE40UP work.lab2_CJ_tb 
+# Start time: 13:38:36 on Sep 07,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+quit -si
+# unknown switch: -si
+quit -sim
+# End time: 14:03:57 on Sep 07,2025, Elapsed time: 0:25:21
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:00 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 14:42:00 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:00 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# ** Error: (vlog-13069) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(17): near "logic": syntax error, unexpected "SystemVerilog keyword 'logic'", expecting ';'.
+# ** Error: (vlog-13069) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(44): near "if": syntax error, unexpected if, expecting ';'.
+# ** Warning: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(64): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(72): (vlog-2730) Undefined variable: 'switches'.
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(72): (vlog-2730) Undefined variable: 'switches_expected'.
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(82): (vlog-2730) Undefined variable: 'j'.
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(83): (vlog-2730) Undefined variable: 'z'.
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(86): (vlog-2730) Undefined variable: 'i'.
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 1
+# C:/lscc/radiant/2024.2/questasim/win64/vlog failed.
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:42:01 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 14:42:01 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:43:52 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# ** Error (suppressible): C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(19): (vlog-2388) 'errors' already declared in this scope (lab2_CJ_tb) at C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(17).
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(19): (vlog-13311) 'errors' already declared in this scope ('lab2_CJ_tb') with a type.
+# ** Error: (vlog-13069) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(57): near "endmodule": syntax error, unexpected endmodule.
+# End time: 14:43:52 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# C:/lscc/radiant/2024.2/questasim/win64/vlog failed.
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:45:19 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# ** Error: (vlog-13069) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(53): near "endmodule": syntax error, unexpected endmodule.
+# End time: 14:45:19 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/lscc/radiant/2024.2/questasim/win64/vlog failed.
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:46:17 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# ** Error: (vlog-13069) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(53): near "endmodule": syntax error, unexpected endmodule.
+# End time: 14:46:17 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/lscc/radiant/2024.2/questasim/win64/vlog failed.
+vsim work.lab2_CJ_tb
+# vsim work.lab2_CJ_tb 
+# Start time: 14:46:19 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(28): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'lab2_CJ_tb.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 14:46:20 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim work.lab2_CJ_tb
+# vsim work.lab2_CJ_tb 
+# Start time: 14:46:28 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(28): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'lab2_CJ_tb.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 14:46:29 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:46:41 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# ** Error: (vlog-13069) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(53): near "endmodule": syntax error, unexpected endmodule.
+# End time: 14:46:41 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/lscc/radiant/2024.2/questasim/win64/vlog failed.
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:47:08 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 14:47:09 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.lab2_CJ_tb {-voptargs=+acc -L iCE40UP -Lf iCE40UP}
+# vsim work.lab2_CJ_tb -voptargs="+acc -L iCE40UP -Lf iCE40UP" 
+# Start time: 14:47:31 on Sep 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 'clk'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 's2'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'seg'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (5) for port 'anode2'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3722) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(20): [TFMPC] - Missing connection for port 'leds'.
+quit -sim
+# End time: 14:48:38 on Sep 07,2025, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 8
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 14:48:46 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 14:48:46 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 14:48:57 on Sep 07,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 'clk'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 's2'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'seg'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (5) for port 'anode2'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3722) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(20): [TFMPC] - Missing connection for port 'leds'.
+quit -sim
+# End time: 14:49:48 on Sep 07,2025, Elapsed time: 0:00:51
+# Errors: 0, Warnings: 7
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 14:49:57 on Sep 07,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 'clk'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 's2'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'seg'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(13).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (5) for port 'anode2'. The port definition is at: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv(14).
+#    Time: 0 ps  Iteration: 0  Instance: /lab2_CJ_tb/dut File: C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv Line: 20
+# ** Warning: (vsim-3722) C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv(20): [TFMPC] - Missing connection for port 'leds'.
+quit -sim
+# End time: 15:00:06 on Sep 07,2025, Elapsed time: 0:10:09
+# Errors: 0, Warnings: 7
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:00:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 15:00:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:00:28 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/enable \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run
+run 100
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run 100
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/dut/enable
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run 100
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+# Error: inputs =  1,  2
+#  outputs = 121 ( 36 expected)
+quit -sim
+# End time: 15:06:11 on Sep 07,2025, Elapsed time: 0:05:43
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:06:16 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:06:16 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:06:32 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run 100
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+quit -sim
+# End time: 15:12:18 on Sep 07,2025, Elapsed time: 0:05:46
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:12:28 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:12:28 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:12:51 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run 100
+# Error: inputs = 0001, 0010
+#  outputs = 0000000 (1111001 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run 1000
+# Error: inputs = 0001, 0010
+#  outputs = 0000000 (1111001 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+quit -sim
+# End time: 15:15:27 on Sep 07,2025, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:15:32 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:15:32 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:15:48 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:15:48 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:15:57 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run 1000
+# Error: inputs = 0001, 0010
+#  outputs = 0000000 (1111001 expected)
+# Error: inputs = 0001, 0010
+#  outputs = 1111001 (0100100 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run
+quit -sim
+# End time: 15:22:49 on Sep 07,2025, Elapsed time: 0:06:52
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:25 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 15:23:25 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:25 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 15:23:25 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:25 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 15:23:25 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:25 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 15:23:25 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:25 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 15:23:25 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:26 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:23:26 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:26 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 15:23:26 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:26 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 15:23:26 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:23:26 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 15:23:26 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:23:44 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run
+quit -sim
+# End time: 15:24:32 on Sep 07,2025, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2
+# Compile of decoder.sv was successful.
+# Compile of decoder_tb.sv was successful.
+# Compile of encoder.sv was successful.
+# Compile of encoder_tb.sv was successful.
+# Compile of lab2_CJ.sv was successful.
+# Compile of lab2_CJ_tb.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of two_input_led_adder.sv was successful.
+# Compile of two_input_led_adder_tb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:24:55 on Sep 07,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run
+run 100
+run 1000
+quit -sim
+# End time: 15:34:53 on Sep 07,2025, Elapsed time: 0:09:58
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:35:08 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 15:35:08 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:35:18 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run 100
+run 1000
+run 1000
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/dut/clk \
+sim:/lab2_CJ_tb/dut/s1 \
+sim:/lab2_CJ_tb/dut/s2 \
+sim:/lab2_CJ_tb/dut/seg \
+sim:/lab2_CJ_tb/dut/anode1 \
+sim:/lab2_CJ_tb/dut/anode2 \
+sim:/lab2_CJ_tb/dut/leds \
+sim:/lab2_CJ_tb/dut/int_osc \
+sim:/lab2_CJ_tb/dut/counter \
+sim:/lab2_CJ_tb/dut/enable \
+sim:/lab2_CJ_tb/dut/cur_s \
+sim:/lab2_CJ_tb/dut/sum
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run 500
+quit -sim
+# End time: 15:54:47 on Sep 07,2025, Elapsed time: 0:19:29
+# Errors: 0, Warnings: 2
+# Compile of decoder.sv was successful.
+# Compile of decoder_tb.sv was successful.
+# Compile of encoder.sv was successful.
+# Compile of encoder_tb.sv was successful.
+# Compile of lab2_CJ.sv was successful.
+# Compile of lab2_CJ_tb.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of two_input_led_adder.sv was successful.
+# Compile of two_input_led_adder_tb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 15:55:18 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/dut/clk \
+sim:/lab2_CJ_tb/dut/reset \
+sim:/lab2_CJ_tb/dut/s1 \
+sim:/lab2_CJ_tb/dut/s2 \
+sim:/lab2_CJ_tb/dut/seg \
+sim:/lab2_CJ_tb/dut/anode1 \
+sim:/lab2_CJ_tb/dut/anode2 \
+sim:/lab2_CJ_tb/dut/leds \
+sim:/lab2_CJ_tb/dut/int_osc \
+sim:/lab2_CJ_tb/dut/counter \
+sim:/lab2_CJ_tb/dut/enable \
+sim:/lab2_CJ_tb/dut/cur_s \
+sim:/lab2_CJ_tb/dut/sum
+run
+run 1000
+# Error inputs = 0001, 0010
+#  seg = 0000000 (1111001 expected)
+#  anodes = 0,1 (0,1 expected)
+# Error inputs = 0001, 0010
+#  seg = 1111001 (0100100 expected)
+#  anodes = 1,0 (1,0 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/errors
+run 500
+# Error inputs = 0001, 0010
+#  seg = 0000000 (1111001 expected)
+#  anodes = 0,1 (0,1 expected)
+run 1000
+# Error inputs = 0001, 0010
+#  seg = 1111001 (0100100 expected)
+#  anodes = 1,0 (1,0 expected)
+# Error inputs = 0001, 0010
+#  seg = 0100100 (1111001 expected)
+#  anodes = 0,1 (0,1 expected)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+run 2000
+# Error inputs = 0001, 0010
+#  seg = 0000000 (1111001 expected)
+#  anodes = 0,1 (0,1 expected)
+# Error inputs = 0001, 0010
+#  seg = 1111001 (0100100 expected)
+#  anodes = 1,0 (1,0 expected)
+# Error inputs = 0001, 0010
+#  seg = 0100100 (1111001 expected)
+#  anodes = 0,1 (0,1 expected)
+# Error inputs = 0001, 0010
+#  seg = 1111001 (0100100 expected)
+#  anodes = 1,0 (1,0 expected)
+quit -sim
+# End time: 16:13:11 on Sep 07,2025, Elapsed time: 0:17:53
+# Errors: 0, Warnings: 2
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:13:17 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 16:13:18 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Compile of decoder.sv was successful.
+# Compile of decoder_tb.sv was successful.
+# Compile of encoder.sv was successful.
+# Compile of encoder_tb.sv was successful.
+# Compile of lab2_CJ.sv was successful.
+# Compile of lab2_CJ_tb.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of two_input_led_adder.sv was successful.
+# Compile of two_input_led_adder_tb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 16:13:32 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/dut/clk \
+sim:/lab2_CJ_tb/dut/reset \
+sim:/lab2_CJ_tb/dut/s1 \
+sim:/lab2_CJ_tb/dut/s2 \
+sim:/lab2_CJ_tb/dut/seg \
+sim:/lab2_CJ_tb/dut/anode1 \
+sim:/lab2_CJ_tb/dut/anode2 \
+sim:/lab2_CJ_tb/dut/leds \
+sim:/lab2_CJ_tb/dut/counter \
+sim:/lab2_CJ_tb/dut/enable \
+sim:/lab2_CJ_tb/dut/cur_s \
+sim:/lab2_CJ_tb/dut/sum
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/errors
+run 1000
+run 3000
+quit -sim
+# End time: 16:23:01 on Sep 07,2025, Elapsed time: 0:09:29
+# Errors: 0, Warnings: 3
+# Compile of decoder.sv was successful.
+# Compile of decoder_tb.sv was successful.
+# Compile of encoder.sv was successful.
+# Compile of encoder_tb.sv was successful.
+# Compile of lab2_CJ.sv was successful.
+# Compile of lab2_CJ_tb.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of two_input_led_adder.sv was successful.
+# Compile of two_input_led_adder_tb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of decoder.sv was successful.
+# Compile of decoder_tb.sv was successful.
+# Compile of encoder.sv was successful.
+# Compile of encoder_tb.sv was successful.
+# Compile of lab2_CJ.sv was successful.
+# Compile of lab2_CJ_tb.sv was successful.
+# Compile of segment.sv was successful.
+# Compile of two_input_led_adder.sv was successful.
+# Compile of two_input_led_adder_tb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 16:27:41 on Sep 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run 1000
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 16:29:08 on Sep 07,2025, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 4
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:14 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 16:29:14 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:14 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/decoder_tb.sv 
+# -- Compiling module decoder_tb
+# 
+# Top level modules:
+# 	decoder_tb
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder.sv 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/encoder_tb.sv 
+# -- Compiling module encoder_tb
+# 
+# Top level modules:
+# 	encoder_tb
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ.sv 
+# -- Compiling module lab2_CJ
+# 
+# Top level modules:
+# 	lab2_CJ
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/lab2_CJ_tb.sv 
+# -- Compiling module lab2_CJ_tb
+# 
+# Top level modules:
+# 	lab2_CJ_tb
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/segment.sv 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder.sv 
+# -- Compiling module two_input_led_adder
+# 
+# Top level modules:
+# 	two_input_led_adder
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 16:29:15 on Sep 07,2025
+# vlog -reportprogress 300 -work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact C:/Users/chrjohnson/e155/lab_1/fpga/radiant_project/lab2_CJ/source/impl_1/two_input_led_adder_tb.sv 
+# -- Compiling module two_input_led_adder_tb
+# 
+# Top level modules:
+# 	two_input_led_adder_tb
+# End time: 16:29:15 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim {-voptargs=+acc -L iCE40UP -Lf iCE40UP} work.lab2_CJ_tb
+# vsim -voptargs="+acc -L iCE40UP -Lf iCE40UP" work.lab2_CJ_tb 
+# Start time: 16:29:29 on Sep 07,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.lab2_CJ_tb(fast)
+# Loading work.lab2_CJ(fast)
+# Loading work.two_input_led_adder(fast)
+# Loading work.encoder(fast)
+# Loading work.segment(fast)
+# Loading work.decoder(fast)
+add wave -position insertpoint  \
+sim:/lab2_CJ_tb/clk \
+sim:/lab2_CJ_tb/reset \
+sim:/lab2_CJ_tb/s1 \
+sim:/lab2_CJ_tb/s2 \
+sim:/lab2_CJ_tb/seg \
+sim:/lab2_CJ_tb/seg_expected \
+sim:/lab2_CJ_tb/anode1 \
+sim:/lab2_CJ_tb/anode2 \
+sim:/lab2_CJ_tb/anode1_expected \
+sim:/lab2_CJ_tb/anode2_expected \
+sim:/lab2_CJ_tb/led \
+sim:/lab2_CJ_tb/led_expected \
+sim:/lab2_CJ_tb/testnum \
+sim:/lab2_CJ_tb/errors
+run 1000
+# End time: 16:32:54 on Sep 07,2025, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 1
